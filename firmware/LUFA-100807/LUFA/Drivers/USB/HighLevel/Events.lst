@@ -1,0 +1,111 @@
+   1               		.file	"Events.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               		.section	.text.USB_Event_Stub,"ax",@progbits
+  11               	.global	USB_Event_Stub
+  13               	USB_Event_Stub:
+  14               	.LFB4:
+  15               		.file 1 "LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c"
+   1:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** /*
+   2:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****              LUFA Library
+   3:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****      Copyright (C) Dean Camera, 2010.
+   4:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****               
+   5:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   dean [at] fourwalledcubicle [dot] com
+   6:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****       www.fourwalledcubicle.com
+   7:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** */
+   8:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** 
+   9:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** /*
+  10:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   Copyright 2010  Dean Camera (dean [at] fourwalledcubicle [dot] com)
+  11:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** 
+  12:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   Permission to use, copy, modify, distribute, and sell this 
+  13:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   software and its documentation for any purpose is hereby granted
+  14:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   without fee, provided that the above copyright notice appear in 
+  15:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   all copies and that both that the copyright notice and this
+  16:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   permission notice and warranty disclaimer appear in supporting 
+  17:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   documentation, and that the name of the author not be used in 
+  18:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   advertising or publicity pertaining to distribution of the 
+  19:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   software without specific, written prior permission.
+  20:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** 
+  21:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   The author disclaim all warranties with regard to this
+  22:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   software, including all implied warranties of merchantability
+  23:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   and fitness.  In no event shall the author be liable for any
+  24:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   special, indirect or consequential damages or any damages
+  25:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   whatsoever resulting from loss of use, data or profits, whether
+  26:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   in an action of contract, negligence or other tortious action,
+  27:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   arising out of or in connection with the use or performance of
+  28:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c ****   this software.
+  29:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** */
+  30:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** 
+  31:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** #define  __INCLUDE_FROM_EVENTS_C
+  32:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** #define  __INCLUDE_FROM_USB_DRIVER
+  33:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** #include "Events.h"
+  34:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** 
+  35:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** void USB_Event_Stub(void)
+  36:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** {
+  16               		.loc 1 36 1 view -0
+  17               		.cfi_startproc
+  18               	/* prologue: function */
+  19               	/* frame size = 0 */
+  20               	/* stack size = 0 */
+  21               	.L__stack_usage = 0
+  37:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** 
+  38:LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.c **** }
+  22               		.loc 1 38 1 view .LVU1
+  23               	/* epilogue start */
+  24 0000 0895      		ret
+  25               		.cfi_endproc
+  26               	.LFE4:
+  28               		.weak	EVENT_USB_Device_StartOfFrame
+  29               		.set	EVENT_USB_Device_StartOfFrame,USB_Event_Stub
+  30               		.weak	EVENT_USB_Device_Reset
+  31               		.set	EVENT_USB_Device_Reset,USB_Event_Stub
+  32               		.weak	EVENT_USB_Device_WakeUp
+  33               		.set	EVENT_USB_Device_WakeUp,USB_Event_Stub
+  34               		.weak	EVENT_USB_Device_Suspend
+  35               		.set	EVENT_USB_Device_Suspend,USB_Event_Stub
+  36               		.weak	EVENT_USB_Device_ConfigurationChanged
+  37               		.set	EVENT_USB_Device_ConfigurationChanged,USB_Event_Stub
+  38               		.weak	EVENT_USB_Device_UnhandledControlRequest
+  39               		.set	EVENT_USB_Device_UnhandledControlRequest,USB_Event_Stub
+  40               		.weak	EVENT_USB_Device_Disconnect
+  41               		.set	EVENT_USB_Device_Disconnect,USB_Event_Stub
+  42               		.weak	EVENT_USB_Device_Connect
+  43               		.set	EVENT_USB_Device_Connect,USB_Event_Stub
+  44               		.text
+  45               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 Events.c
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:2      *ABS*:0000003e __SP_H__
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:3      *ABS*:0000003d __SP_L__
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:4      *ABS*:0000003f __SREG__
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:5      *ABS*:00000000 __tmp_reg__
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:6      *ABS*:00000001 __zero_reg__
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:13     .text.USB_Event_Stub:00000000 USB_Event_Stub
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:16     .text.USB_Event_Stub:00000000 .Loc.0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:17     .text.USB_Event_Stub:00000000 L0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:22     .text.USB_Event_Stub:00000000 .Loc.1
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:25     .text.USB_Event_Stub:00000002 L0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:13     .text.USB_Event_Stub:00000000 EVENT_USB_Device_StartOfFrame
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:13     .text.USB_Event_Stub:00000000 EVENT_USB_Device_Reset
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:13     .text.USB_Event_Stub:00000000 EVENT_USB_Device_WakeUp
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:13     .text.USB_Event_Stub:00000000 EVENT_USB_Device_Suspend
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:13     .text.USB_Event_Stub:00000000 EVENT_USB_Device_ConfigurationChanged
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:13     .text.USB_Event_Stub:00000000 EVENT_USB_Device_UnhandledControlRequest
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:13     .text.USB_Event_Stub:00000000 EVENT_USB_Device_Disconnect
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:13     .text.USB_Event_Stub:00000000 EVENT_USB_Device_Connect
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:44     .text.USB_Event_Stub:00000002 L0
+                     .debug_frame:00000000 L0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:109    .debug_abbrev:00000000 .Ldebug_abbrev0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:192    .debug_ranges:00000000 .Ldebug_ranges0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:198    .debug_line:00000000 .Ldebug_line0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:14     .text.USB_Event_Stub:00000000 .LFB4
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:26     .text.USB_Event_Stub:00000002 .LFE4
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccBdRtIL.s:47     .debug_info:00000000 .Ldebug_info0
+
+NO UNDEFINED SYMBOLS
