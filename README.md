@@ -27,49 +27,56 @@
 ### Install Dependencies
 
 1. Install Python dependencies:
+
    ```bash
    pip install flask
    ```
 
 2. Install AVR toolchain (macOS example using Homebrew):
+
     ```bash
     brew install avr-gcc avrdude
     ```
+
 ---
+
 ### Usage
 
-1. Clone 
+1. Clone
 
 ```bash
 git clone https://github.com/your-username/pump_my_mocolufa.git
 cd pump_my_mocolufa
 ```
-2. Run the Flask Application:
+
+1. Run the Flask Application:
+
    ```bash
    python app.py
    ```
-3. Open the Web Interface
+
+2. Open the Web Interface
 Open your browser and navigate to:
 
-http://127.0.0.1:5000/
+<http://127.0.0.1:5000/>
 
-4. Customize Firmware
+3. Customize Firmware
 
 ---
 
-### Fill in the form fields:
+### Fill in the form fields
 
-Device Name: Enter the name of your device.
+**Device Name:** Enter the name of your device.
 
-Manufacturer: Enter the manufacturer name.
+**Manufacturer:** Enter the manufacturer name.
 
-VID (hex): Use the randomly generated VID or specify your own.
+**VID (hex):** Use the randomly generated VID or specify your own.
 
-PID (hex): Use the randomly generated PID or specify your own.
+**PID (hex):** Use the randomly generated PID or specify your own.
 
-Arduino Model: Select either UNO or MEGA.
+**Arduino Model:** Select either UNO or MEGA.
 
-Click the Generate Custom Firmware button.
+Click the Generate Custom Firmware button!
 
 ---
 
@@ -77,10 +84,10 @@ Click the Generate Custom Firmware button.
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
 
---- 
+---
 
 ### Acknowledgments
 
-LUFA Library: Developed by Dean Camera (www.fourwalledcubicle.com).
+LUFA Library: Developed by Dean Camera (<www.fourwalledcubicle.com>).
 
 MocoLUFA: Based on the dualMocoLUFA project by morecat_lab.
