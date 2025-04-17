@@ -7,7 +7,7 @@ import random
 app = Flask(__name__)
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-FIRMWARE_DIR = FIRMWARE_DIR = os.path.join(BASE_DIR, 'firmware')
+FIRMWARE_DIR = os.path.join(BASE_DIR, 'firmware')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
