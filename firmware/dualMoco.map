@@ -562,7 +562,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x1566
+.text           0x00000000     0x1572
  *(.vectors)
  .vectors       0x00000000       0x74 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/../../../../../../avr/lib/avr35/crtatmega16u2.o
                 0x00000000                __vectors
@@ -578,44 +578,44 @@ END GROUP
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem.*)
- .progmem.data  0x00000074      0x151 Descriptors.o
+ .progmem.data  0x00000074      0x15d Descriptors.o
                 0x00000074                ProductStringMIDI
                 0x0000008c                ProductStringSerial
-                0x000000a4                ManufacturerStringMIDI
-                0x000000c8                ManufacturerStringSerial
-                0x000000fa                LanguageString
-                0x000000fe                ConfigurationDescriptorMIDI
-                0x00000163                ConfigurationDescriptorSerial
-                0x000001a1                DeviceDescriptorMIDI
-                0x000001b3                DeviceDescriptorSerial
-                0x000001c6                        . = ALIGN (0x2)
- *fill*         0x000001c5        0x1 
+                0x000000b0                ManufacturerStringMIDI
+                0x000000d4                ManufacturerStringSerial
+                0x00000106                LanguageString
+                0x0000010a                ConfigurationDescriptorMIDI
+                0x0000016f                ConfigurationDescriptorSerial
+                0x000001ad                DeviceDescriptorMIDI
+                0x000001bf                DeviceDescriptorSerial
+                0x000001d2                        . = ALIGN (0x2)
+ *fill*         0x000001d1        0x1 
  *(.lowtext)
  *(.lowtext*)
-                0x000001c6                        __ctors_start = .
+                0x000001d2                        __ctors_start = .
  *(.ctors)
-                0x000001c6                        __ctors_end = .
-                0x000001c6                        __dtors_start = .
+                0x000001d2                        __ctors_end = .
+                0x000001d2                        __dtors_start = .
  *(.dtors)
-                0x000001c6                        __dtors_end = .
+                0x000001d2                        __dtors_end = .
  SORT_BY_NAME(*)(.ctors)
  SORT_BY_NAME(*)(.dtors)
  *(.init0)
- .init0         0x000001c6        0x0 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/../../../../../../avr/lib/avr35/crtatmega16u2.o
-                0x000001c6                __init
+ .init0         0x000001d2        0x0 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/../../../../../../avr/lib/avr35/crtatmega16u2.o
+                0x000001d2                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000001c6        0xc /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/../../../../../../avr/lib/avr35/crtatmega16u2.o
+ .init2         0x000001d2        0xc /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/../../../../../../avr/lib/avr35/crtatmega16u2.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x000001d2       0x16 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_copy_data.o)
-                0x000001d2                __do_copy_data
- .init4         0x000001e8       0x10 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_clear_bss.o)
-                0x000001e8                __do_clear_bss
+ .init4         0x000001de       0x16 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_copy_data.o)
+                0x000001de                __do_copy_data
+ .init4         0x000001f4       0x10 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_clear_bss.o)
+                0x000001f4                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -626,187 +626,187 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x000001f8        0x6 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/../../../../../../avr/lib/avr35/crtatmega16u2.o
+ .init9         0x00000204        0x6 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/../../../../../../avr/lib/avr35/crtatmega16u2.o
  *(.init9)
  *(.text)
- .text          0x000001fe        0x2 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/../../../../../../avr/lib/avr35/crtatmega16u2.o
-                0x000001fe                __vector_20
-                0x000001fe                __vector_28
-                0x000001fe                __vector_1
-                0x000001fe                __vector_24
-                0x000001fe                __bad_interrupt
-                0x000001fe                __vector_6
-                0x000001fe                __vector_3
-                0x000001fe                __vector_25
-                0x000001fe                __vector_13
-                0x000001fe                __vector_17
-                0x000001fe                __vector_19
-                0x000001fe                __vector_7
-                0x000001fe                __vector_27
-                0x000001fe                __vector_5
-                0x000001fe                __vector_4
-                0x000001fe                __vector_9
-                0x000001fe                __vector_2
-                0x000001fe                __vector_21
-                0x000001fe                __vector_15
-                0x000001fe                __vector_8
-                0x000001fe                __vector_26
-                0x000001fe                __vector_14
-                0x000001fe                __vector_10
-                0x000001fe                __vector_16
-                0x000001fe                __vector_18
-                0x000001fe                __vector_22
-                0x00000200                        . = ALIGN (0x2)
+ .text          0x0000020a        0x2 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/../../../../../../avr/lib/avr35/crtatmega16u2.o
+                0x0000020a                __vector_20
+                0x0000020a                __vector_28
+                0x0000020a                __vector_1
+                0x0000020a                __vector_24
+                0x0000020a                __bad_interrupt
+                0x0000020a                __vector_6
+                0x0000020a                __vector_3
+                0x0000020a                __vector_25
+                0x0000020a                __vector_13
+                0x0000020a                __vector_17
+                0x0000020a                __vector_19
+                0x0000020a                __vector_7
+                0x0000020a                __vector_27
+                0x0000020a                __vector_5
+                0x0000020a                __vector_4
+                0x0000020a                __vector_9
+                0x0000020a                __vector_2
+                0x0000020a                __vector_21
+                0x0000020a                __vector_15
+                0x0000020a                __vector_8
+                0x0000020a                __vector_26
+                0x0000020a                __vector_14
+                0x0000020a                __vector_10
+                0x0000020a                __vector_16
+                0x0000020a                __vector_18
+                0x0000020a                __vector_22
+                0x0000020c                        . = ALIGN (0x2)
  *(.text.*)
  .text.RingBuffer_Remove
-                0x00000200       0x3a dualMoco.o
+                0x0000020c       0x3a dualMoco.o
  .text.parseUSBMidiMessage
-                0x0000023a       0x6a dualMoco.o
-                0x0000023a                parseUSBMidiMessage
+                0x00000246       0x6a dualMoco.o
+                0x00000246                parseUSBMidiMessage
  .text.parseSerialMidiMessage
-                0x000002a4       0xe0 dualMoco.o
-                0x000002a4                parseSerialMidiMessage
+                0x000002b0       0xe0 dualMoco.o
+                0x000002b0                parseSerialMidiMessage
  .text.processMIDI
-                0x00000384      0x108 dualMoco.o
-                0x00000384                processMIDI
+                0x00000390      0x108 dualMoco.o
+                0x00000390                processMIDI
  .text.processSerial
-                0x0000048c      0x12c dualMoco.o
-                0x0000048c                processSerial
+                0x00000498      0x12c dualMoco.o
+                0x00000498                processSerial
  .text.SetupHardware
-                0x000005b8       0x92 dualMoco.o
-                0x000005b8                SetupHardware
+                0x000005c4       0x92 dualMoco.o
+                0x000005c4                SetupHardware
  .text.startup.main
-                0x0000064a        0xe dualMoco.o
-                0x0000064a                main
+                0x00000656        0xe dualMoco.o
+                0x00000656                main
  .text.EVENT_USB_Device_Connect
-                0x00000658        0x2 dualMoco.o
-                0x00000658                EVENT_USB_Device_Connect
+                0x00000664        0x2 dualMoco.o
+                0x00000664                EVENT_USB_Device_Connect
  .text.EVENT_USB_Device_Disconnect
-                0x0000065a        0x2 dualMoco.o
-                0x0000065a                EVENT_USB_Device_Disconnect
+                0x00000666        0x2 dualMoco.o
+                0x00000666                EVENT_USB_Device_Disconnect
  .text.EVENT_USB_Device_ConfigurationChanged
-                0x0000065c       0x14 dualMoco.o
-                0x0000065c                EVENT_USB_Device_ConfigurationChanged
+                0x00000668       0x14 dualMoco.o
+                0x00000668                EVENT_USB_Device_ConfigurationChanged
  .text.EVENT_USB_Device_UnhandledControlRequest
-                0x00000670       0x10 dualMoco.o
-                0x00000670                EVENT_USB_Device_UnhandledControlRequest
+                0x0000067c       0x10 dualMoco.o
+                0x0000067c                EVENT_USB_Device_UnhandledControlRequest
  .text.EVENT_CDC_Device_LineEncodingChanged
-                0x00000680      0x10c dualMoco.o
-                0x00000680                EVENT_CDC_Device_LineEncodingChanged
+                0x0000068c      0x10c dualMoco.o
+                0x0000068c                EVENT_CDC_Device_LineEncodingChanged
  .text.__vector_23
-                0x0000078c       0x76 dualMoco.o
-                0x0000078c                __vector_23
+                0x00000798       0x76 dualMoco.o
+                0x00000798                __vector_23
  .text.EVENT_CDC_Device_ControLineStateChanged
-                0x00000802       0x10 dualMoco.o
-                0x00000802                EVENT_CDC_Device_ControLineStateChanged
+                0x0000080e       0x10 dualMoco.o
+                0x0000080e                EVENT_CDC_Device_ControLineStateChanged
  .text.CALLBACK_USB_GetDescriptor
-                0x00000812       0xd8 Descriptors.o
-                0x00000812                CALLBACK_USB_GetDescriptor
+                0x0000081e       0xd8 Descriptors.o
+                0x0000081e                CALLBACK_USB_GetDescriptor
  .text.Endpoint_BytesToEPSizeMaskDynamic
-                0x000008ea       0x1c LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
-                0x000008ea                Endpoint_BytesToEPSizeMaskDynamic
+                0x000008f6       0x1c LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
+                0x000008f6                Endpoint_BytesToEPSizeMaskDynamic
  .text.Endpoint_ConfigureEndpoint_Prv
-                0x00000906       0x26 LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
-                0x00000906                Endpoint_ConfigureEndpoint_Prv
+                0x00000912       0x26 LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
+                0x00000912                Endpoint_ConfigureEndpoint_Prv
  .text.Endpoint_ClearEndpoints
-                0x0000092c       0x28 LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
-                0x0000092c                Endpoint_ClearEndpoints
+                0x00000938       0x28 LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
+                0x00000938                Endpoint_ClearEndpoints
  .text.Endpoint_ClearStatusStage
-                0x00000954       0x3a LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
-                0x00000954                Endpoint_ClearStatusStage
+                0x00000960       0x3a LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
+                0x00000960                Endpoint_ClearStatusStage
  .text.Endpoint_WaitUntilReady
-                0x0000098e       0x5c LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
-                0x0000098e                Endpoint_WaitUntilReady
+                0x0000099a       0x5c LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
+                0x0000099a                Endpoint_WaitUntilReady
  .text.Endpoint_Write_Stream_LE
-                0x000009ea       0x76 LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
-                0x000009ea                Endpoint_Write_Stream_LE
+                0x000009f6       0x76 LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
+                0x000009f6                Endpoint_Write_Stream_LE
  .text.Endpoint_Read_Stream_LE
-                0x00000a60       0x76 LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
-                0x00000a60                Endpoint_Read_Stream_LE
+                0x00000a6c       0x76 LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
+                0x00000a6c                Endpoint_Read_Stream_LE
  .text.Endpoint_Write_Control_Stream_LE
-                0x00000ad6       0xaa LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
-                0x00000ad6                Endpoint_Write_Control_Stream_LE
+                0x00000ae2       0xaa LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
+                0x00000ae2                Endpoint_Write_Control_Stream_LE
  .text.Endpoint_Write_Control_PStream_LE
-                0x00000b80       0xac LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
-                0x00000b80                Endpoint_Write_Control_PStream_LE
+                0x00000b8c       0xac LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
+                0x00000b8c                Endpoint_Write_Control_PStream_LE
  .text.Endpoint_Read_Control_Stream_LE
-                0x00000c2c       0x70 LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
-                0x00000c2c                Endpoint_Read_Control_Stream_LE
+                0x00000c38       0x70 LUFA-100807/LUFA/Drivers/USB/LowLevel/Endpoint.o
+                0x00000c38                Endpoint_Read_Control_Stream_LE
  .text.USB_ResetInterface
-                0x00000c9c       0x7c LUFA-100807/LUFA/Drivers/USB/LowLevel/USBController.o
-                0x00000c9c                USB_ResetInterface
+                0x00000ca8       0x7c LUFA-100807/LUFA/Drivers/USB/LowLevel/USBController.o
+                0x00000ca8                USB_ResetInterface
  .text.USB_Init
-                0x00000d18        0xa LUFA-100807/LUFA/Drivers/USB/LowLevel/USBController.o
-                0x00000d18                USB_Init
+                0x00000d24        0xa LUFA-100807/LUFA/Drivers/USB/LowLevel/USBController.o
+                0x00000d24                USB_Init
  .text.USB_INT_DisableAllInterrupts
-                0x00000d22        0x6 LUFA-100807/LUFA/Drivers/USB/LowLevel/USBInterrupt.o
-                0x00000d22                USB_INT_DisableAllInterrupts
+                0x00000d2e        0x6 LUFA-100807/LUFA/Drivers/USB/LowLevel/USBInterrupt.o
+                0x00000d2e                USB_INT_DisableAllInterrupts
  .text.USB_INT_ClearAllInterrupts
-                0x00000d28        0x6 LUFA-100807/LUFA/Drivers/USB/LowLevel/USBInterrupt.o
-                0x00000d28                USB_INT_ClearAllInterrupts
+                0x00000d34        0x6 LUFA-100807/LUFA/Drivers/USB/LowLevel/USBInterrupt.o
+                0x00000d34                USB_INT_ClearAllInterrupts
  .text.__vector_11
-                0x00000d2e      0x14e LUFA-100807/LUFA/Drivers/USB/LowLevel/USBInterrupt.o
-                0x00000d2e                __vector_11
+                0x00000d3a      0x14e LUFA-100807/LUFA/Drivers/USB/LowLevel/USBInterrupt.o
+                0x00000d3a                __vector_11
  .text.__vector_12
-                0x00000e7c       0x82 LUFA-100807/LUFA/Drivers/USB/LowLevel/USBInterrupt.o
-                0x00000e7c                __vector_12
+                0x00000e88       0x82 LUFA-100807/LUFA/Drivers/USB/LowLevel/USBInterrupt.o
+                0x00000e88                __vector_12
  .text.USB_Device_ProcessControlRequest
-                0x00000efe      0x26e LUFA-100807/LUFA/Drivers/USB/HighLevel/DeviceStandardReq.o
-                0x00000efe                USB_Device_ProcessControlRequest
+                0x00000f0a      0x26e LUFA-100807/LUFA/Drivers/USB/HighLevel/DeviceStandardReq.o
+                0x00000f0a                USB_Device_ProcessControlRequest
  .text.USB_Event_Stub
-                0x0000116c        0x2 LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.o
-                0x0000116c                EVENT_USB_Device_WakeUp
-                0x0000116c                USB_Event_Stub
-                0x0000116c                EVENT_USB_Device_Suspend
-                0x0000116c                EVENT_USB_Device_StartOfFrame
-                0x0000116c                EVENT_USB_Device_Reset
+                0x00001178        0x2 LUFA-100807/LUFA/Drivers/USB/HighLevel/Events.o
+                0x00001178                EVENT_USB_Device_WakeUp
+                0x00001178                USB_Event_Stub
+                0x00001178                EVENT_USB_Device_Suspend
+                0x00001178                EVENT_USB_Device_StartOfFrame
+                0x00001178                EVENT_USB_Device_Reset
  .text.USB_USBTask
-                0x0000116e       0x22 LUFA-100807/LUFA/Drivers/USB/HighLevel/USBTask.o
-                0x0000116e                USB_USBTask
+                0x0000117a       0x22 LUFA-100807/LUFA/Drivers/USB/HighLevel/USBTask.o
+                0x0000117a                USB_USBTask
  .text.CDC_Device_Event_Stub
-                0x00001190        0x2 LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
-                0x00001190                EVENT_CDC_Device_BreakSent
-                0x00001190                CDC_Device_Event_Stub
+                0x0000119c        0x2 LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
+                0x0000119c                EVENT_CDC_Device_BreakSent
+                0x0000119c                CDC_Device_Event_Stub
  .text.CDC_Device_ProcessControlRequest
-                0x00001192       0xcc LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
-                0x00001192                CDC_Device_ProcessControlRequest
+                0x0000119e       0xcc LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
+                0x0000119e                CDC_Device_ProcessControlRequest
  .text.CDC_Device_ConfigureEndpoints
-                0x0000125e       0x88 LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
-                0x0000125e                CDC_Device_ConfigureEndpoints
+                0x0000126a       0x88 LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
+                0x0000126a                CDC_Device_ConfigureEndpoints
  .text.CDC_Device_SendByte
-                0x000012e6       0x4a LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
-                0x000012e6                CDC_Device_SendByte
+                0x000012f2       0x4a LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
+                0x000012f2                CDC_Device_SendByte
  .text.CDC_Device_Flush
-                0x00001330       0x52 LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
-                0x00001330                CDC_Device_Flush
+                0x0000133c       0x52 LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
+                0x0000133c                CDC_Device_Flush
  .text.CDC_Device_USBTask
-                0x00001382       0x1e LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
-                0x00001382                CDC_Device_USBTask
+                0x0000138e       0x1e LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
+                0x0000138e                CDC_Device_USBTask
  .text.CDC_Device_ReceiveByte
-                0x000013a0       0x54 LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
-                0x000013a0                CDC_Device_ReceiveByte
+                0x000013ac       0x54 LUFA-100807/LUFA/Drivers/USB/Class/Device/CDC.o
+                0x000013ac                CDC_Device_ReceiveByte
  .text.MIDI_Device_ConfigureEndpoints
-                0x000013f4       0x62 LUFA-100807/LUFA/Drivers/USB/Class/Device/MIDI.o
-                0x000013f4                MIDI_Device_ConfigureEndpoints
+                0x00001400       0x62 LUFA-100807/LUFA/Drivers/USB/Class/Device/MIDI.o
+                0x00001400                MIDI_Device_ConfigureEndpoints
  .text.MIDI_Device_SendEventPacket
-                0x00001456       0x46 LUFA-100807/LUFA/Drivers/USB/Class/Device/MIDI.o
-                0x00001456                MIDI_Device_SendEventPacket
+                0x00001462       0x46 LUFA-100807/LUFA/Drivers/USB/Class/Device/MIDI.o
+                0x00001462                MIDI_Device_SendEventPacket
  .text.MIDI_Device_Flush
-                0x0000149c       0x26 LUFA-100807/LUFA/Drivers/USB/Class/Device/MIDI.o
-                0x0000149c                MIDI_Device_Flush
+                0x000014a8       0x26 LUFA-100807/LUFA/Drivers/USB/Class/Device/MIDI.o
+                0x000014a8                MIDI_Device_Flush
  .text.MIDI_Device_ReceiveEventPacket
-                0x000014c2       0x3c LUFA-100807/LUFA/Drivers/USB/Class/Device/MIDI.o
-                0x000014c2                MIDI_Device_ReceiveEventPacket
+                0x000014ce       0x3c LUFA-100807/LUFA/Drivers/USB/Class/Device/MIDI.o
+                0x000014ce                MIDI_Device_ReceiveEventPacket
  .text.libgcc.div
-                0x000014fe       0x44 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_udivmodsi4.o)
-                0x000014fe                __udivmodsi4
- .text.libgcc   0x00001542        0xc /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_tablejump2.o)
-                0x00001542                __tablejump2__
-                0x0000154e                        . = ALIGN (0x2)
+                0x0000150a       0x44 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_udivmodsi4.o)
+                0x0000150a                __udivmodsi4
+ .text.libgcc   0x0000154e        0xc /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_tablejump2.o)
+                0x0000154e                __tablejump2__
+                0x0000155a                        . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000154e        0x0 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_exit.o)
-                0x0000154e                exit
-                0x0000154e                _exit
+ .fini9         0x0000155a        0x0 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_exit.o)
+                0x0000155a                exit
+                0x0000155a                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -825,19 +825,19 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000154e        0x4 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_exit.o)
+ .fini0         0x0000155a        0x4 /opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/avr35/libgcc.a(_exit.o)
  *(.fini0)
  *(.hightext)
  *(.hightext*)
  *(.progmemx.*)
-                0x00001552                        . = ALIGN (0x2)
+                0x0000155e                        . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  .jumptables.gcc.USB_Device_ProcessControlRequest
-                0x00001552       0x14 LUFA-100807/LUFA/Drivers/USB/HighLevel/DeviceStandardReq.o
-                0x00001566                        _etext = .
+                0x0000155e       0x14 LUFA-100807/LUFA/Drivers/USB/HighLevel/DeviceStandardReq.o
+                0x00001572                        _etext = .
 
-.data           0x00800100       0x32 load address 0x00001566
+.data           0x00800100       0x32 load address 0x00001572
                 0x00800100                        PROVIDE (__data_start = .)
  *(.data)
  .data          0x00800100       0x21 dualMoco.o
@@ -874,8 +874,8 @@ END GROUP
                 0x00800279                USB_IsInitialized
                 0x0080027a                USB_ControlRequest
                 0x00800282                        PROVIDE (__bss_end = .)
-                0x00001566                        __data_load_start = LOADADDR (.data)
-                0x00001598                        __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00001572                        __data_load_start = LOADADDR (.data)
+                0x000015a4                        __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x00800282        0x0
                 [!provide]                        PROVIDE (__noinit_start = .)

@@ -116,8 +116,8 @@
  101:Descriptors.c ****                  
  102:Descriptors.c ****      .Endpoint0Size          = FIXED_CONTROL_ENDPOINT_SIZE,
  103:Descriptors.c ****          
- 104:Descriptors.c ****      .VendorID = 0x4EA6, // Atmel
- 105:Descriptors.c ****      .ProductID = 0x626F, // LUFA USB-MIDI Demo application
+ 104:Descriptors.c ****      .VendorID = 0xD14B, // Atmel
+ 105:Descriptors.c ****      .ProductID = 0xFA42, // LUFA USB-MIDI Demo application
  106:Descriptors.c ****      .ReleaseNumber          = 0x0000,
  107:Descriptors.c ****          
  108:Descriptors.c ****      .ManufacturerStrIndex   = 0x01,
@@ -901,7 +901,7 @@
  311 0016 7500      		.word	117
  312               	.global	ProductStringSerial
  315               	ProductStringSerial:
- 316 0018 18        		.byte	24
+ 316 0018 24        		.byte	36
  317 0019 03        		.byte	3
  318 001a 4100      		.word	65
  319 001c 7200      		.word	114
@@ -911,454 +911,460 @@
  323 0024 6E00      		.word	110
  324 0026 6F00      		.word	111
  325 0028 2000      		.word	32
- 326 002a 5500      		.word	85
- 327 002c 6E00      		.word	110
- 328 002e 6F00      		.word	111
- 329               	.global	ManufacturerStringMIDI
- 332               	ManufacturerStringMIDI:
- 333 0030 24        		.byte	36
- 334 0031 03        		.byte	3
- 335 0032 6B00      		.word	107
- 336 0034 7500      		.word	117
- 337 0036 7700      		.word	119
- 338 0038 6100      		.word	97
- 339 003a 7400      		.word	116
- 340 003c 6100      		.word	97
- 341 003e 7900      		.word	121
- 342 0040 4000      		.word	64
- 343 0042 6E00      		.word	110
- 344 0044 6900      		.word	105
- 345 0046 6600      		.word	102
- 346 0048 7400      		.word	116
+ 326 002a 4D00      		.word	77
+ 327 002c 6500      		.word	101
+ 328 002e 6700      		.word	103
+ 329 0030 6100      		.word	97
+ 330 0032 2000      		.word	32
+ 331 0034 3200      		.word	50
+ 332 0036 3500      		.word	53
+ 333 0038 3600      		.word	54
+ 334 003a 3000      		.word	48
+ 335               	.global	ManufacturerStringMIDI
+ 338               	ManufacturerStringMIDI:
+ 339 003c 24        		.byte	36
+ 340 003d 03        		.byte	3
+ 341 003e 6B00      		.word	107
+ 342 0040 7500      		.word	117
+ 343 0042 7700      		.word	119
+ 344 0044 6100      		.word	97
+ 345 0046 7400      		.word	116
+ 346 0048 6100      		.word	97
  347 004a 7900      		.word	121
- 348 004c 2E00      		.word	46
- 349 004e 6300      		.word	99
- 350 0050 6F00      		.word	111
- 351 0052 6D00      		.word	109
- 352               	.global	ManufacturerStringSerial
- 355               	ManufacturerStringSerial:
- 356 0054 32        		.byte	50
- 357 0055 03        		.byte	3
- 358 0056 4100      		.word	65
- 359 0058 7200      		.word	114
- 360 005a 6400      		.word	100
- 361 005c 7500      		.word	117
- 362 005e 6900      		.word	105
- 363 0060 6E00      		.word	110
- 364 0062 6F00      		.word	111
- 365 0064 2000      		.word	32
- 366 0066 2800      		.word	40
- 367 0068 7700      		.word	119
- 368 006a 7700      		.word	119
- 369 006c 7700      		.word	119
- 370 006e 2E00      		.word	46
- 371 0070 6100      		.word	97
- 372 0072 7200      		.word	114
- 373 0074 6400      		.word	100
- 374 0076 7500      		.word	117
- 375 0078 6900      		.word	105
- 376 007a 6E00      		.word	110
- 377 007c 6F00      		.word	111
- 378 007e 2E00      		.word	46
- 379 0080 6300      		.word	99
- 380 0082 6300      		.word	99
- 381 0084 2900      		.word	41
- 382               	.global	LanguageString
- 385               	LanguageString:
- 386 0086 04        		.byte	4
- 387 0087 03        		.byte	3
- 388 0088 0904      		.word	1033
- 389               	.global	ConfigurationDescriptorMIDI
- 392               	ConfigurationDescriptorMIDI:
- 393 008a 09        		.byte	9
- 394 008b 02        		.byte	2
- 395 008c 6500      		.word	101
- 396 008e 02        		.byte	2
- 397 008f 01        		.byte	1
- 398 0090 00        		.byte	0
- 399 0091 C0        		.byte	-64
- 400 0092 32        		.byte	50
- 401 0093 09        		.byte	9
- 402 0094 04        		.byte	4
- 403 0095 00        		.byte	0
- 404 0096 00        		.byte	0
- 405 0097 00        		.byte	0
- 406 0098 01        		.byte	1
- 407 0099 01        		.byte	1
- 408 009a 00        		.byte	0
- 409 009b 00        		.byte	0
- 410 009c 09        		.byte	9
- 411 009d 24        		.byte	36
- 412 009e 01        		.byte	1
- 413 009f 0001      		.word	256
- 414 00a1 0900      		.word	9
- 415 00a3 01        		.byte	1
- 416 00a4 01        		.ascii	"\001"
- 417 00a5 09        		.byte	9
- 418 00a6 04        		.byte	4
- 419 00a7 01        		.byte	1
- 420 00a8 00        		.byte	0
- 421 00a9 02        		.byte	2
- 422 00aa 01        		.byte	1
- 423 00ab 03        		.byte	3
- 424 00ac 00        		.byte	0
- 425 00ad 00        		.byte	0
- 426 00ae 07        		.byte	7
- 427 00af 24        		.byte	36
- 428 00b0 01        		.byte	1
- 429 00b1 0001      		.word	256
- 430 00b3 4100      		.word	65
- 431 00b5 06        		.byte	6
- 432 00b6 24        		.byte	36
- 433 00b7 02        		.byte	2
- 434 00b8 01        		.byte	1
- 435 00b9 01        		.byte	1
- 436 00ba 00        		.byte	0
- 437 00bb 06        		.byte	6
- 438 00bc 24        		.byte	36
- 439 00bd 02        		.byte	2
- 440 00be 02        		.byte	2
- 441 00bf 02        		.byte	2
- 442 00c0 00        		.byte	0
- 443 00c1 09        		.byte	9
- 444 00c2 24        		.byte	36
- 445 00c3 03        		.byte	3
- 446 00c4 01        		.byte	1
- 447 00c5 03        		.byte	3
- 448 00c6 01        		.byte	1
- 449 00c7 02        		.ascii	"\002"
- 450 00c8 01        		.ascii	"\001"
- 451 00c9 00        		.byte	0
- 452 00ca 09        		.byte	9
- 453 00cb 24        		.byte	36
- 454 00cc 03        		.byte	3
- 455 00cd 02        		.byte	2
- 456 00ce 04        		.byte	4
- 457 00cf 01        		.byte	1
- 458 00d0 01        		.ascii	"\001"
- 459 00d1 01        		.ascii	"\001"
- 460 00d2 00        		.byte	0
- 461 00d3 09        		.byte	9
- 462 00d4 05        		.byte	5
- 463 00d5 01        		.byte	1
- 464 00d6 02        		.byte	2
- 465 00d7 4000      		.word	64
- 466 00d9 00        		.byte	0
- 467 00da 00        		.byte	0
- 468 00db 00        		.byte	0
- 469 00dc 05        		.byte	5
- 470 00dd 25        		.byte	37
- 471 00de 01        		.byte	1
- 472 00df 01        		.byte	1
- 473 00e0 01        		.ascii	"\001"
- 474 00e1 09        		.byte	9
- 475 00e2 05        		.byte	5
- 476 00e3 82        		.byte	-126
- 477 00e4 02        		.byte	2
- 478 00e5 4000      		.word	64
- 479 00e7 00        		.byte	0
- 480 00e8 00        		.byte	0
- 481 00e9 00        		.byte	0
- 482 00ea 05        		.byte	5
- 483 00eb 25        		.byte	37
- 484 00ec 01        		.byte	1
- 485 00ed 01        		.byte	1
- 486 00ee 03        		.ascii	"\003"
- 487               	.global	ConfigurationDescriptorSerial
- 490               	ConfigurationDescriptorSerial:
- 491 00ef 09        		.byte	9
- 492 00f0 02        		.byte	2
- 493 00f1 3E00      		.word	62
- 494 00f3 02        		.byte	2
- 495 00f4 01        		.byte	1
- 496 00f5 00        		.byte	0
- 497 00f6 C0        		.byte	-64
- 498 00f7 32        		.byte	50
- 499 00f8 09        		.byte	9
- 500 00f9 04        		.byte	4
- 501 00fa 00        		.byte	0
- 502 00fb 00        		.byte	0
- 503 00fc 01        		.byte	1
- 504 00fd 02        		.byte	2
- 505 00fe 02        		.byte	2
- 506 00ff 01        		.byte	1
- 507 0100 00        		.byte	0
- 508 0101 05        		.byte	5
- 509 0102 24        		.byte	36
- 510 0103 00        		.byte	0
- 511 0104 0110      		.ascii	"\001\020"
- 512 0106 04        		.byte	4
- 513 0107 24        		.byte	36
- 514 0108 02        		.byte	2
- 515 0109 06        		.ascii	"\006"
- 516 010a 05        		.byte	5
- 517 010b 24        		.byte	36
- 518 010c 06        		.byte	6
- 519 010d 00        		.string	""
- 520 010e 01        		.ascii	"\001"
- 521 010f 07        		.byte	7
- 522 0110 05        		.byte	5
- 523 0111 82        		.byte	-126
- 524 0112 03        		.byte	3
- 525 0113 0800      		.word	8
- 526 0115 FF        		.byte	-1
- 527 0116 09        		.byte	9
- 528 0117 04        		.byte	4
- 529 0118 01        		.byte	1
- 530 0119 00        		.byte	0
- 531 011a 02        		.byte	2
- 532 011b 0A        		.byte	10
- 533 011c 00        		.byte	0
- 534 011d 00        		.byte	0
- 535 011e 00        		.byte	0
- 536 011f 07        		.byte	7
- 537 0120 05        		.byte	5
- 538 0121 04        		.byte	4
- 539 0122 02        		.byte	2
- 540 0123 4000      		.word	64
- 541 0125 01        		.byte	1
- 542 0126 07        		.byte	7
- 543 0127 05        		.byte	5
- 544 0128 83        		.byte	-125
- 545 0129 02        		.byte	2
- 546 012a 4000      		.word	64
- 547 012c 01        		.byte	1
- 548               	.global	DeviceDescriptorMIDI
- 551               	DeviceDescriptorMIDI:
- 552 012d 12        		.byte	18
- 553 012e 01        		.byte	1
- 554 012f 1001      		.word	272
- 555 0131 00        		.byte	0
- 556 0132 00        		.byte	0
- 557 0133 00        		.byte	0
- 558 0134 08        		.byte	8
- 559 0135 A64E      		.word	20134
- 560 0137 6F62      		.word	25199
- 561 0139 0000      		.word	0
- 562 013b 01        		.byte	1
- 563 013c 02        		.byte	2
- 564 013d 00        		.byte	0
- 565 013e 01        		.byte	1
- 566               	.global	DeviceDescriptorSerial
- 569               	DeviceDescriptorSerial:
- 570 013f 12        		.byte	18
- 571 0140 01        		.byte	1
- 572 0141 1001      		.word	272
- 573 0143 02        		.byte	2
- 574 0144 00        		.byte	0
- 575 0145 00        		.byte	0
- 576 0146 08        		.byte	8
- 577 0147 4123      		.word	9025
- 578 0149 0100      		.word	1
- 579 014b 0100      		.word	1
- 580 014d 01        		.byte	1
- 581 014e 02        		.byte	2
- 582 014f DC        		.byte	-36
- 583 0150 01        		.byte	1
- 584               		.text
- 585               	.Letext0:
- 586               		.file 2 "/opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/avr/include/stdint.h"
- 587               		.file 3 "/opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/include/stddef.h"
- 588               		.file 4 "LUFA-100807/LUFA/Drivers/USB/HighLevel/../LowLevel/../HighLevel/StdDescriptors.h"
- 589               		.file 5 "LUFA-100807/LUFA/Drivers/USB/HighLevel/../LowLevel/../HighLevel/StdRequestType.h"
- 590               		.file 6 "LUFA-100807/LUFA/Drivers/USB/HighLevel/../LowLevel/../HighLevel/DeviceStandardReq.h"
- 591               		.file 7 "LUFA-100807/LUFA/Drivers/USB/HighLevel/USBTask.h"
- 592               		.file 8 "/opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/avr/include/stdio.h"
- 593               		.file 9 "LUFA-100807/LUFA/Drivers/USB/Class/Device/../Common/Audio.h"
- 594               		.file 10 "LUFA-100807/LUFA/Drivers/USB/Class/Device/../Common/MIDI.h"
- 595               		.file 11 "Descriptors.h"
- 596               		.file 12 "dualMoco.h"
+ 348 004c 4000      		.word	64
+ 349 004e 6E00      		.word	110
+ 350 0050 6900      		.word	105
+ 351 0052 6600      		.word	102
+ 352 0054 7400      		.word	116
+ 353 0056 7900      		.word	121
+ 354 0058 2E00      		.word	46
+ 355 005a 6300      		.word	99
+ 356 005c 6F00      		.word	111
+ 357 005e 6D00      		.word	109
+ 358               	.global	ManufacturerStringSerial
+ 361               	ManufacturerStringSerial:
+ 362 0060 32        		.byte	50
+ 363 0061 03        		.byte	3
+ 364 0062 4100      		.word	65
+ 365 0064 7200      		.word	114
+ 366 0066 6400      		.word	100
+ 367 0068 7500      		.word	117
+ 368 006a 6900      		.word	105
+ 369 006c 6E00      		.word	110
+ 370 006e 6F00      		.word	111
+ 371 0070 2000      		.word	32
+ 372 0072 2800      		.word	40
+ 373 0074 7700      		.word	119
+ 374 0076 7700      		.word	119
+ 375 0078 7700      		.word	119
+ 376 007a 2E00      		.word	46
+ 377 007c 6100      		.word	97
+ 378 007e 7200      		.word	114
+ 379 0080 6400      		.word	100
+ 380 0082 7500      		.word	117
+ 381 0084 6900      		.word	105
+ 382 0086 6E00      		.word	110
+ 383 0088 6F00      		.word	111
+ 384 008a 2E00      		.word	46
+ 385 008c 6300      		.word	99
+ 386 008e 6300      		.word	99
+ 387 0090 2900      		.word	41
+ 388               	.global	LanguageString
+ 391               	LanguageString:
+ 392 0092 04        		.byte	4
+ 393 0093 03        		.byte	3
+ 394 0094 0904      		.word	1033
+ 395               	.global	ConfigurationDescriptorMIDI
+ 398               	ConfigurationDescriptorMIDI:
+ 399 0096 09        		.byte	9
+ 400 0097 02        		.byte	2
+ 401 0098 6500      		.word	101
+ 402 009a 02        		.byte	2
+ 403 009b 01        		.byte	1
+ 404 009c 00        		.byte	0
+ 405 009d C0        		.byte	-64
+ 406 009e 32        		.byte	50
+ 407 009f 09        		.byte	9
+ 408 00a0 04        		.byte	4
+ 409 00a1 00        		.byte	0
+ 410 00a2 00        		.byte	0
+ 411 00a3 00        		.byte	0
+ 412 00a4 01        		.byte	1
+ 413 00a5 01        		.byte	1
+ 414 00a6 00        		.byte	0
+ 415 00a7 00        		.byte	0
+ 416 00a8 09        		.byte	9
+ 417 00a9 24        		.byte	36
+ 418 00aa 01        		.byte	1
+ 419 00ab 0001      		.word	256
+ 420 00ad 0900      		.word	9
+ 421 00af 01        		.byte	1
+ 422 00b0 01        		.ascii	"\001"
+ 423 00b1 09        		.byte	9
+ 424 00b2 04        		.byte	4
+ 425 00b3 01        		.byte	1
+ 426 00b4 00        		.byte	0
+ 427 00b5 02        		.byte	2
+ 428 00b6 01        		.byte	1
+ 429 00b7 03        		.byte	3
+ 430 00b8 00        		.byte	0
+ 431 00b9 00        		.byte	0
+ 432 00ba 07        		.byte	7
+ 433 00bb 24        		.byte	36
+ 434 00bc 01        		.byte	1
+ 435 00bd 0001      		.word	256
+ 436 00bf 4100      		.word	65
+ 437 00c1 06        		.byte	6
+ 438 00c2 24        		.byte	36
+ 439 00c3 02        		.byte	2
+ 440 00c4 01        		.byte	1
+ 441 00c5 01        		.byte	1
+ 442 00c6 00        		.byte	0
+ 443 00c7 06        		.byte	6
+ 444 00c8 24        		.byte	36
+ 445 00c9 02        		.byte	2
+ 446 00ca 02        		.byte	2
+ 447 00cb 02        		.byte	2
+ 448 00cc 00        		.byte	0
+ 449 00cd 09        		.byte	9
+ 450 00ce 24        		.byte	36
+ 451 00cf 03        		.byte	3
+ 452 00d0 01        		.byte	1
+ 453 00d1 03        		.byte	3
+ 454 00d2 01        		.byte	1
+ 455 00d3 02        		.ascii	"\002"
+ 456 00d4 01        		.ascii	"\001"
+ 457 00d5 00        		.byte	0
+ 458 00d6 09        		.byte	9
+ 459 00d7 24        		.byte	36
+ 460 00d8 03        		.byte	3
+ 461 00d9 02        		.byte	2
+ 462 00da 04        		.byte	4
+ 463 00db 01        		.byte	1
+ 464 00dc 01        		.ascii	"\001"
+ 465 00dd 01        		.ascii	"\001"
+ 466 00de 00        		.byte	0
+ 467 00df 09        		.byte	9
+ 468 00e0 05        		.byte	5
+ 469 00e1 01        		.byte	1
+ 470 00e2 02        		.byte	2
+ 471 00e3 4000      		.word	64
+ 472 00e5 00        		.byte	0
+ 473 00e6 00        		.byte	0
+ 474 00e7 00        		.byte	0
+ 475 00e8 05        		.byte	5
+ 476 00e9 25        		.byte	37
+ 477 00ea 01        		.byte	1
+ 478 00eb 01        		.byte	1
+ 479 00ec 01        		.ascii	"\001"
+ 480 00ed 09        		.byte	9
+ 481 00ee 05        		.byte	5
+ 482 00ef 82        		.byte	-126
+ 483 00f0 02        		.byte	2
+ 484 00f1 4000      		.word	64
+ 485 00f3 00        		.byte	0
+ 486 00f4 00        		.byte	0
+ 487 00f5 00        		.byte	0
+ 488 00f6 05        		.byte	5
+ 489 00f7 25        		.byte	37
+ 490 00f8 01        		.byte	1
+ 491 00f9 01        		.byte	1
+ 492 00fa 03        		.ascii	"\003"
+ 493               	.global	ConfigurationDescriptorSerial
+ 496               	ConfigurationDescriptorSerial:
+ 497 00fb 09        		.byte	9
+ 498 00fc 02        		.byte	2
+ 499 00fd 3E00      		.word	62
+ 500 00ff 02        		.byte	2
+ 501 0100 01        		.byte	1
+ 502 0101 00        		.byte	0
+ 503 0102 C0        		.byte	-64
+ 504 0103 32        		.byte	50
+ 505 0104 09        		.byte	9
+ 506 0105 04        		.byte	4
+ 507 0106 00        		.byte	0
+ 508 0107 00        		.byte	0
+ 509 0108 01        		.byte	1
+ 510 0109 02        		.byte	2
+ 511 010a 02        		.byte	2
+ 512 010b 01        		.byte	1
+ 513 010c 00        		.byte	0
+ 514 010d 05        		.byte	5
+ 515 010e 24        		.byte	36
+ 516 010f 00        		.byte	0
+ 517 0110 0110      		.ascii	"\001\020"
+ 518 0112 04        		.byte	4
+ 519 0113 24        		.byte	36
+ 520 0114 02        		.byte	2
+ 521 0115 06        		.ascii	"\006"
+ 522 0116 05        		.byte	5
+ 523 0117 24        		.byte	36
+ 524 0118 06        		.byte	6
+ 525 0119 00        		.string	""
+ 526 011a 01        		.ascii	"\001"
+ 527 011b 07        		.byte	7
+ 528 011c 05        		.byte	5
+ 529 011d 82        		.byte	-126
+ 530 011e 03        		.byte	3
+ 531 011f 0800      		.word	8
+ 532 0121 FF        		.byte	-1
+ 533 0122 09        		.byte	9
+ 534 0123 04        		.byte	4
+ 535 0124 01        		.byte	1
+ 536 0125 00        		.byte	0
+ 537 0126 02        		.byte	2
+ 538 0127 0A        		.byte	10
+ 539 0128 00        		.byte	0
+ 540 0129 00        		.byte	0
+ 541 012a 00        		.byte	0
+ 542 012b 07        		.byte	7
+ 543 012c 05        		.byte	5
+ 544 012d 04        		.byte	4
+ 545 012e 02        		.byte	2
+ 546 012f 4000      		.word	64
+ 547 0131 01        		.byte	1
+ 548 0132 07        		.byte	7
+ 549 0133 05        		.byte	5
+ 550 0134 83        		.byte	-125
+ 551 0135 02        		.byte	2
+ 552 0136 4000      		.word	64
+ 553 0138 01        		.byte	1
+ 554               	.global	DeviceDescriptorMIDI
+ 557               	DeviceDescriptorMIDI:
+ 558 0139 12        		.byte	18
+ 559 013a 01        		.byte	1
+ 560 013b 1001      		.word	272
+ 561 013d 00        		.byte	0
+ 562 013e 00        		.byte	0
+ 563 013f 00        		.byte	0
+ 564 0140 08        		.byte	8
+ 565 0141 4BD1      		.word	-11957
+ 566 0143 42FA      		.word	-1470
+ 567 0145 0000      		.word	0
+ 568 0147 01        		.byte	1
+ 569 0148 02        		.byte	2
+ 570 0149 00        		.byte	0
+ 571 014a 01        		.byte	1
+ 572               	.global	DeviceDescriptorSerial
+ 575               	DeviceDescriptorSerial:
+ 576 014b 12        		.byte	18
+ 577 014c 01        		.byte	1
+ 578 014d 1001      		.word	272
+ 579 014f 02        		.byte	2
+ 580 0150 00        		.byte	0
+ 581 0151 00        		.byte	0
+ 582 0152 08        		.byte	8
+ 583 0153 4123      		.word	9025
+ 584 0155 1000      		.word	16
+ 585 0157 0100      		.word	1
+ 586 0159 01        		.byte	1
+ 587 015a 02        		.byte	2
+ 588 015b DC        		.byte	-36
+ 589 015c 01        		.byte	1
+ 590               		.text
+ 591               	.Letext0:
+ 592               		.file 2 "/opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/avr/include/stdint.h"
+ 593               		.file 3 "/opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/lib/avr-gcc/9/gcc/avr/9.4.0/include/stddef.h"
+ 594               		.file 4 "LUFA-100807/LUFA/Drivers/USB/HighLevel/../LowLevel/../HighLevel/StdDescriptors.h"
+ 595               		.file 5 "LUFA-100807/LUFA/Drivers/USB/HighLevel/../LowLevel/../HighLevel/StdRequestType.h"
+ 596               		.file 6 "LUFA-100807/LUFA/Drivers/USB/HighLevel/../LowLevel/../HighLevel/DeviceStandardReq.h"
+ 597               		.file 7 "LUFA-100807/LUFA/Drivers/USB/HighLevel/USBTask.h"
+ 598               		.file 8 "/opt/homebrew/Cellar/avr-gcc@9/9.4.0_1/avr/include/stdio.h"
+ 599               		.file 9 "LUFA-100807/LUFA/Drivers/USB/Class/Device/../Common/Audio.h"
+ 600               		.file 10 "LUFA-100807/LUFA/Drivers/USB/Class/Device/../Common/MIDI.h"
+ 601               		.file 11 "Descriptors.h"
+ 602               		.file 12 "dualMoco.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 Descriptors.c
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:2      *ABS*:0000003e __SP_H__
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3      *ABS*:0000003d __SP_L__
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:4      *ABS*:0000003f __SREG__
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:5      *ABS*:00000000 __tmp_reg__
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:6      *ABS*:00000001 __zero_reg__
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:13     .text.CALLBACK_USB_GetDescriptor:00000000 CALLBACK_USB_GetDescriptor
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:17     .text.CALLBACK_USB_GetDescriptor:00000000 .Loc.0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:18     .text.CALLBACK_USB_GetDescriptor:00000000 L0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:23     .text.CALLBACK_USB_GetDescriptor:00000000 .Loc.1
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:26     .text.CALLBACK_USB_GetDescriptor:00000004 .Loc.2
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:27     .text.CALLBACK_USB_GetDescriptor:00000004 .Loc.3
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:31     .text.CALLBACK_USB_GetDescriptor:00000008 .Loc.4
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:32     .text.CALLBACK_USB_GetDescriptor:00000008 .Loc.5
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:33     .text.CALLBACK_USB_GetDescriptor:00000008 .Loc.6
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:34     .text.CALLBACK_USB_GetDescriptor:00000008 .Loc.7
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:42     .text.CALLBACK_USB_GetDescriptor:00000018 L0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:44     .text.CALLBACK_USB_GetDescriptor:0000001a .Loc.8
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:45     .text.CALLBACK_USB_GetDescriptor:0000001a .Loc.9
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:48     .text.CALLBACK_USB_GetDescriptor:0000001e .Loc.10
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:50     .text.CALLBACK_USB_GetDescriptor:00000022 L0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:52     .text.CALLBACK_USB_GetDescriptor:00000024 .Loc.11
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:55     .text.CALLBACK_USB_GetDescriptor:00000028 .Loc.12
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:569    .progmem.data:0000013f DeviceDescriptorSerial
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:60     .text.CALLBACK_USB_GetDescriptor:0000002c .Loc.13
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:61     .text.CALLBACK_USB_GetDescriptor:0000002c .Loc.14
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:64     .text.CALLBACK_USB_GetDescriptor:00000030 .Loc.15
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:66     .text.CALLBACK_USB_GetDescriptor:00000030 .Loc.16
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:70     .text.CALLBACK_USB_GetDescriptor:00000032 .Loc.17
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:71     .text.CALLBACK_USB_GetDescriptor:00000032 .Loc.18
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:74     .text.CALLBACK_USB_GetDescriptor:00000036 .Loc.19
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:76     .text.CALLBACK_USB_GetDescriptor:0000003a L0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:78     .text.CALLBACK_USB_GetDescriptor:0000003c .Loc.20
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:81     .text.CALLBACK_USB_GetDescriptor:00000040 .Loc.21
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:490    .progmem.data:000000ef ConfigurationDescriptorSerial
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:85     .text.CALLBACK_USB_GetDescriptor:00000044 .Loc.22
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:89     .text.CALLBACK_USB_GetDescriptor:00000046 .Loc.23
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:92     .text.CALLBACK_USB_GetDescriptor:00000048 .Loc.24
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:100    .text.CALLBACK_USB_GetDescriptor:00000058 L0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:102    .text.CALLBACK_USB_GetDescriptor:0000005a .Loc.25
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:104    .text.CALLBACK_USB_GetDescriptor:0000005a .Loc.26
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:106    .text.CALLBACK_USB_GetDescriptor:0000005a .Loc.27
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:107    .text.CALLBACK_USB_GetDescriptor:0000005a .Loc.28
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:108    .text.CALLBACK_USB_GetDescriptor:0000005a .Loc.29
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:385    .progmem.data:00000086 LanguageString
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:117    .text.CALLBACK_USB_GetDescriptor:00000060 .Loc.30
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:120    .text.CALLBACK_USB_GetDescriptor:00000060 .Loc.31
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:124    .text.CALLBACK_USB_GetDescriptor:00000064 .Loc.32
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:125    .text.CALLBACK_USB_GetDescriptor:00000064 .Loc.33
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:129    .text.CALLBACK_USB_GetDescriptor:00000068 .Loc.34
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:133    .text.CALLBACK_USB_GetDescriptor:0000006a .Loc.35
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:134    .text.CALLBACK_USB_GetDescriptor:0000006a .Loc.36
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:138    .text.CALLBACK_USB_GetDescriptor:00000072 .Loc.37
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:140    .text.CALLBACK_USB_GetDescriptor:00000072 .Loc.38
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:142    .text.CALLBACK_USB_GetDescriptor:00000072 .Loc.39
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:143    .text.CALLBACK_USB_GetDescriptor:00000072 .Loc.40
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:144    .text.CALLBACK_USB_GetDescriptor:00000072 .Loc.41
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:332    .progmem.data:00000030 ManufacturerStringMIDI
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:153    .text.CALLBACK_USB_GetDescriptor:00000078 .Loc.42
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:156    .text.CALLBACK_USB_GetDescriptor:00000078 .Loc.43
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:160    .text.CALLBACK_USB_GetDescriptor:0000007c .Loc.44
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:164    .text.CALLBACK_USB_GetDescriptor:00000080 .Loc.45
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:168    .text.CALLBACK_USB_GetDescriptor:00000082 .Loc.46
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:169    .text.CALLBACK_USB_GetDescriptor:00000082 .Loc.47
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:171    .text.CALLBACK_USB_GetDescriptor:00000082 .Loc.48
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:172    .text.CALLBACK_USB_GetDescriptor:00000082 .Loc.49
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:173    .text.CALLBACK_USB_GetDescriptor:00000082 .Loc.50
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:355    .progmem.data:00000054 ManufacturerStringSerial
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:182    .text.CALLBACK_USB_GetDescriptor:00000088 .Loc.51
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:185    .text.CALLBACK_USB_GetDescriptor:00000088 .Loc.52
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:189    .text.CALLBACK_USB_GetDescriptor:0000008c .Loc.53
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:193    .text.CALLBACK_USB_GetDescriptor:00000090 .Loc.54
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:197    .text.CALLBACK_USB_GetDescriptor:00000092 .Loc.55
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:198    .text.CALLBACK_USB_GetDescriptor:00000092 .Loc.56
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:202    .text.CALLBACK_USB_GetDescriptor:0000009a .Loc.57
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:204    .text.CALLBACK_USB_GetDescriptor:0000009a .Loc.58
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:206    .text.CALLBACK_USB_GetDescriptor:0000009a .Loc.59
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:207    .text.CALLBACK_USB_GetDescriptor:0000009a .Loc.60
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:208    .text.CALLBACK_USB_GetDescriptor:0000009a .Loc.61
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:298    .progmem.data:00000000 ProductStringMIDI
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:217    .text.CALLBACK_USB_GetDescriptor:000000a0 .Loc.62
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:220    .text.CALLBACK_USB_GetDescriptor:000000a0 .Loc.63
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:224    .text.CALLBACK_USB_GetDescriptor:000000a4 .Loc.64
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:228    .text.CALLBACK_USB_GetDescriptor:000000a8 .Loc.65
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:232    .text.CALLBACK_USB_GetDescriptor:000000aa .Loc.66
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:233    .text.CALLBACK_USB_GetDescriptor:000000aa .Loc.67
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:235    .text.CALLBACK_USB_GetDescriptor:000000aa .Loc.68
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:236    .text.CALLBACK_USB_GetDescriptor:000000aa .Loc.69
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:237    .text.CALLBACK_USB_GetDescriptor:000000aa .Loc.70
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:315    .progmem.data:00000018 ProductStringSerial
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:246    .text.CALLBACK_USB_GetDescriptor:000000b0 .Loc.71
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:249    .text.CALLBACK_USB_GetDescriptor:000000b0 .Loc.72
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:253    .text.CALLBACK_USB_GetDescriptor:000000b4 .Loc.73
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:257    .text.CALLBACK_USB_GetDescriptor:000000b8 .Loc.74
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:261    .text.CALLBACK_USB_GetDescriptor:000000ba .Loc.75
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:264    .text.CALLBACK_USB_GetDescriptor:000000be .Loc.76
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:551    .progmem.data:0000012d DeviceDescriptorMIDI
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:268    .text.CALLBACK_USB_GetDescriptor:000000c2 .Loc.77
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:272    .text.CALLBACK_USB_GetDescriptor:000000c4 .Loc.78
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:275    .text.CALLBACK_USB_GetDescriptor:000000c8 .Loc.79
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:392    .progmem.data:0000008a ConfigurationDescriptorMIDI
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:279    .text.CALLBACK_USB_GetDescriptor:000000cc .Loc.80
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:283    .text.CALLBACK_USB_GetDescriptor:000000ce .Loc.81
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:289    .text.CALLBACK_USB_GetDescriptor:000000d6 .Loc.82
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:291    .text.CALLBACK_USB_GetDescriptor:000000d8 L0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:295    .text.CALLBACK_USB_GetDescriptor:000000d8 L0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:2      *ABS*:0000003e __SP_H__
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3      *ABS*:0000003d __SP_L__
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:4      *ABS*:0000003f __SREG__
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:5      *ABS*:00000000 __tmp_reg__
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:6      *ABS*:00000001 __zero_reg__
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:13     .text.CALLBACK_USB_GetDescriptor:00000000 CALLBACK_USB_GetDescriptor
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:17     .text.CALLBACK_USB_GetDescriptor:00000000 .Loc.0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:18     .text.CALLBACK_USB_GetDescriptor:00000000 L0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:23     .text.CALLBACK_USB_GetDescriptor:00000000 .Loc.1
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:26     .text.CALLBACK_USB_GetDescriptor:00000004 .Loc.2
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:27     .text.CALLBACK_USB_GetDescriptor:00000004 .Loc.3
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:31     .text.CALLBACK_USB_GetDescriptor:00000008 .Loc.4
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:32     .text.CALLBACK_USB_GetDescriptor:00000008 .Loc.5
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:33     .text.CALLBACK_USB_GetDescriptor:00000008 .Loc.6
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:34     .text.CALLBACK_USB_GetDescriptor:00000008 .Loc.7
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:42     .text.CALLBACK_USB_GetDescriptor:00000018 L0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:44     .text.CALLBACK_USB_GetDescriptor:0000001a .Loc.8
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:45     .text.CALLBACK_USB_GetDescriptor:0000001a .Loc.9
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:48     .text.CALLBACK_USB_GetDescriptor:0000001e .Loc.10
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:50     .text.CALLBACK_USB_GetDescriptor:00000022 L0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:52     .text.CALLBACK_USB_GetDescriptor:00000024 .Loc.11
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:55     .text.CALLBACK_USB_GetDescriptor:00000028 .Loc.12
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:575    .progmem.data:0000014b DeviceDescriptorSerial
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:60     .text.CALLBACK_USB_GetDescriptor:0000002c .Loc.13
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:61     .text.CALLBACK_USB_GetDescriptor:0000002c .Loc.14
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:64     .text.CALLBACK_USB_GetDescriptor:00000030 .Loc.15
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:66     .text.CALLBACK_USB_GetDescriptor:00000030 .Loc.16
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:70     .text.CALLBACK_USB_GetDescriptor:00000032 .Loc.17
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:71     .text.CALLBACK_USB_GetDescriptor:00000032 .Loc.18
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:74     .text.CALLBACK_USB_GetDescriptor:00000036 .Loc.19
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:76     .text.CALLBACK_USB_GetDescriptor:0000003a L0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:78     .text.CALLBACK_USB_GetDescriptor:0000003c .Loc.20
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:81     .text.CALLBACK_USB_GetDescriptor:00000040 .Loc.21
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:496    .progmem.data:000000fb ConfigurationDescriptorSerial
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:85     .text.CALLBACK_USB_GetDescriptor:00000044 .Loc.22
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:89     .text.CALLBACK_USB_GetDescriptor:00000046 .Loc.23
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:92     .text.CALLBACK_USB_GetDescriptor:00000048 .Loc.24
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:100    .text.CALLBACK_USB_GetDescriptor:00000058 L0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:102    .text.CALLBACK_USB_GetDescriptor:0000005a .Loc.25
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:104    .text.CALLBACK_USB_GetDescriptor:0000005a .Loc.26
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:106    .text.CALLBACK_USB_GetDescriptor:0000005a .Loc.27
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:107    .text.CALLBACK_USB_GetDescriptor:0000005a .Loc.28
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:108    .text.CALLBACK_USB_GetDescriptor:0000005a .Loc.29
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:391    .progmem.data:00000092 LanguageString
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:117    .text.CALLBACK_USB_GetDescriptor:00000060 .Loc.30
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:120    .text.CALLBACK_USB_GetDescriptor:00000060 .Loc.31
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:124    .text.CALLBACK_USB_GetDescriptor:00000064 .Loc.32
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:125    .text.CALLBACK_USB_GetDescriptor:00000064 .Loc.33
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:129    .text.CALLBACK_USB_GetDescriptor:00000068 .Loc.34
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:133    .text.CALLBACK_USB_GetDescriptor:0000006a .Loc.35
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:134    .text.CALLBACK_USB_GetDescriptor:0000006a .Loc.36
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:138    .text.CALLBACK_USB_GetDescriptor:00000072 .Loc.37
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:140    .text.CALLBACK_USB_GetDescriptor:00000072 .Loc.38
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:142    .text.CALLBACK_USB_GetDescriptor:00000072 .Loc.39
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:143    .text.CALLBACK_USB_GetDescriptor:00000072 .Loc.40
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:144    .text.CALLBACK_USB_GetDescriptor:00000072 .Loc.41
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:338    .progmem.data:0000003c ManufacturerStringMIDI
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:153    .text.CALLBACK_USB_GetDescriptor:00000078 .Loc.42
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:156    .text.CALLBACK_USB_GetDescriptor:00000078 .Loc.43
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:160    .text.CALLBACK_USB_GetDescriptor:0000007c .Loc.44
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:164    .text.CALLBACK_USB_GetDescriptor:00000080 .Loc.45
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:168    .text.CALLBACK_USB_GetDescriptor:00000082 .Loc.46
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:169    .text.CALLBACK_USB_GetDescriptor:00000082 .Loc.47
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:171    .text.CALLBACK_USB_GetDescriptor:00000082 .Loc.48
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:172    .text.CALLBACK_USB_GetDescriptor:00000082 .Loc.49
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:173    .text.CALLBACK_USB_GetDescriptor:00000082 .Loc.50
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:361    .progmem.data:00000060 ManufacturerStringSerial
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:182    .text.CALLBACK_USB_GetDescriptor:00000088 .Loc.51
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:185    .text.CALLBACK_USB_GetDescriptor:00000088 .Loc.52
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:189    .text.CALLBACK_USB_GetDescriptor:0000008c .Loc.53
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:193    .text.CALLBACK_USB_GetDescriptor:00000090 .Loc.54
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:197    .text.CALLBACK_USB_GetDescriptor:00000092 .Loc.55
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:198    .text.CALLBACK_USB_GetDescriptor:00000092 .Loc.56
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:202    .text.CALLBACK_USB_GetDescriptor:0000009a .Loc.57
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:204    .text.CALLBACK_USB_GetDescriptor:0000009a .Loc.58
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:206    .text.CALLBACK_USB_GetDescriptor:0000009a .Loc.59
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:207    .text.CALLBACK_USB_GetDescriptor:0000009a .Loc.60
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:208    .text.CALLBACK_USB_GetDescriptor:0000009a .Loc.61
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:298    .progmem.data:00000000 ProductStringMIDI
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:217    .text.CALLBACK_USB_GetDescriptor:000000a0 .Loc.62
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:220    .text.CALLBACK_USB_GetDescriptor:000000a0 .Loc.63
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:224    .text.CALLBACK_USB_GetDescriptor:000000a4 .Loc.64
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:228    .text.CALLBACK_USB_GetDescriptor:000000a8 .Loc.65
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:232    .text.CALLBACK_USB_GetDescriptor:000000aa .Loc.66
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:233    .text.CALLBACK_USB_GetDescriptor:000000aa .Loc.67
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:235    .text.CALLBACK_USB_GetDescriptor:000000aa .Loc.68
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:236    .text.CALLBACK_USB_GetDescriptor:000000aa .Loc.69
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:237    .text.CALLBACK_USB_GetDescriptor:000000aa .Loc.70
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:315    .progmem.data:00000018 ProductStringSerial
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:246    .text.CALLBACK_USB_GetDescriptor:000000b0 .Loc.71
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:249    .text.CALLBACK_USB_GetDescriptor:000000b0 .Loc.72
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:253    .text.CALLBACK_USB_GetDescriptor:000000b4 .Loc.73
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:257    .text.CALLBACK_USB_GetDescriptor:000000b8 .Loc.74
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:261    .text.CALLBACK_USB_GetDescriptor:000000ba .Loc.75
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:264    .text.CALLBACK_USB_GetDescriptor:000000be .Loc.76
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:557    .progmem.data:00000139 DeviceDescriptorMIDI
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:268    .text.CALLBACK_USB_GetDescriptor:000000c2 .Loc.77
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:272    .text.CALLBACK_USB_GetDescriptor:000000c4 .Loc.78
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:275    .text.CALLBACK_USB_GetDescriptor:000000c8 .Loc.79
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:398    .progmem.data:00000096 ConfigurationDescriptorMIDI
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:279    .text.CALLBACK_USB_GetDescriptor:000000cc .Loc.80
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:283    .text.CALLBACK_USB_GetDescriptor:000000ce .Loc.81
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:289    .text.CALLBACK_USB_GetDescriptor:000000d6 .Loc.82
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:291    .text.CALLBACK_USB_GetDescriptor:000000d8 L0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:295    .text.CALLBACK_USB_GetDescriptor:000000d8 L0
                      .debug_frame:00000000 L0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:69     .text.CALLBACK_USB_GetDescriptor:00000032 .L2
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:88     .text.CALLBACK_USB_GetDescriptor:00000046 .L3
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:282    .text.CALLBACK_USB_GetDescriptor:000000ce .L12
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:260    .text.CALLBACK_USB_GetDescriptor:000000ba .L10
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:271    .text.CALLBACK_USB_GetDescriptor:000000c4 .L11
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:59     .text.CALLBACK_USB_GetDescriptor:0000002c .L4
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:132    .text.CALLBACK_USB_GetDescriptor:0000006a .L5
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:196    .text.CALLBACK_USB_GetDescriptor:00000092 .L6
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:167    .text.CALLBACK_USB_GetDescriptor:00000082 .L7
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:231    .text.CALLBACK_USB_GetDescriptor:000000aa .L8
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:2330   .debug_abbrev:00000000 .Ldebug_abbrev0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3522   .debug_ranges:00000000 .Ldebug_ranges0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3528   .debug_line:00000000 .Ldebug_line0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:15     .text.CALLBACK_USB_GetDescriptor:00000000 .LFB91
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:292    .text.CALLBACK_USB_GetDescriptor:000000d8 .LFE91
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:2868   .debug_loc:0000002a .LLST0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:2825   .debug_loc:00000000 .LVUS0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3067   .debug_loc:00000188 .LLST1
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3040   .debug_loc:0000016e .LVUS1
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3163   .debug_loc:00000247 .LLST2
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3122   .debug_loc:0000021f .LVUS2
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3293   .debug_loc:00000359 .LLST3
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3276   .debug_loc:00000349 .LVUS3
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3367   .debug_loc:000003df .LLST4
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3340   .debug_loc:000003c5 .LVUS4
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:105    .text.CALLBACK_USB_GetDescriptor:0000005a .LBB2
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:119    .text.CALLBACK_USB_GetDescriptor:00000060 .LBE2
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3462   .debug_loc:0000049d .LLST5
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3459   .debug_loc:0000049b .LVUS5
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:141    .text.CALLBACK_USB_GetDescriptor:00000072 .LBB3
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:155    .text.CALLBACK_USB_GetDescriptor:00000078 .LBE3
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3472   .debug_loc:000004b2 .LLST6
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3469   .debug_loc:000004b0 .LVUS6
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:170    .text.CALLBACK_USB_GetDescriptor:00000082 .LBB4
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:184    .text.CALLBACK_USB_GetDescriptor:00000088 .LBE4
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3482   .debug_loc:000004c7 .LLST7
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3479   .debug_loc:000004c5 .LVUS7
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:205    .text.CALLBACK_USB_GetDescriptor:0000009a .LBB5
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:219    .text.CALLBACK_USB_GetDescriptor:000000a0 .LBE5
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3492   .debug_loc:000004dc .LLST8
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3489   .debug_loc:000004da .LVUS8
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:234    .text.CALLBACK_USB_GetDescriptor:000000aa .LBB6
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:248    .text.CALLBACK_USB_GetDescriptor:000000b0 .LBE6
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3502   .debug_loc:000004f1 .LLST9
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:3499   .debug_loc:000004ef .LVUS9
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:14     .text.CALLBACK_USB_GetDescriptor:00000000 .LVL0
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:30     .text.CALLBACK_USB_GetDescriptor:00000008 .LVL1
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:58     .text.CALLBACK_USB_GetDescriptor:0000002c .LVL3
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:68     .text.CALLBACK_USB_GetDescriptor:00000032 .LVL4
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:84     .text.CALLBACK_USB_GetDescriptor:00000044 .LVL6
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:87     .text.CALLBACK_USB_GetDescriptor:00000046 .LVL7
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:128    .text.CALLBACK_USB_GetDescriptor:00000068 .LVL12
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:131    .text.CALLBACK_USB_GetDescriptor:0000006a .LVL13
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:163    .text.CALLBACK_USB_GetDescriptor:00000080 .LVL17
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:166    .text.CALLBACK_USB_GetDescriptor:00000082 .LVL18
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:192    .text.CALLBACK_USB_GetDescriptor:00000090 .LVL21
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:195    .text.CALLBACK_USB_GetDescriptor:00000092 .LVL22
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:227    .text.CALLBACK_USB_GetDescriptor:000000a8 .LVL26
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:230    .text.CALLBACK_USB_GetDescriptor:000000aa .LVL27
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:256    .text.CALLBACK_USB_GetDescriptor:000000b8 .LVL30
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:259    .text.CALLBACK_USB_GetDescriptor:000000ba .LVL31
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:267    .text.CALLBACK_USB_GetDescriptor:000000c2 .LVL32
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:270    .text.CALLBACK_USB_GetDescriptor:000000c4 .LVL33
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:278    .text.CALLBACK_USB_GetDescriptor:000000cc .LVL34
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:281    .text.CALLBACK_USB_GetDescriptor:000000ce .LVL35
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:288    .text.CALLBACK_USB_GetDescriptor:000000d6 .LVL36
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:47     .text.CALLBACK_USB_GetDescriptor:0000001e .LVL2
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:73     .text.CALLBACK_USB_GetDescriptor:00000036 .LVL5
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:91     .text.CALLBACK_USB_GetDescriptor:00000048 .LVL8
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:103    .text.CALLBACK_USB_GetDescriptor:0000005a .LVL9
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:139    .text.CALLBACK_USB_GetDescriptor:00000072 .LVL14
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:203    .text.CALLBACK_USB_GetDescriptor:0000009a .LVL23
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:123    .text.CALLBACK_USB_GetDescriptor:00000064 .LVL11
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:159    .text.CALLBACK_USB_GetDescriptor:0000007c .LVL16
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:188    .text.CALLBACK_USB_GetDescriptor:0000008c .LVL20
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:223    .text.CALLBACK_USB_GetDescriptor:000000a4 .LVL25
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:252    .text.CALLBACK_USB_GetDescriptor:000000b4 .LVL29
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:116    .text.CALLBACK_USB_GetDescriptor:00000060 .LVL10
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:152    .text.CALLBACK_USB_GetDescriptor:00000078 .LVL15
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:181    .text.CALLBACK_USB_GetDescriptor:00000088 .LVL19
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:216    .text.CALLBACK_USB_GetDescriptor:000000a0 .LVL24
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:245    .text.CALLBACK_USB_GetDescriptor:000000b0 .LVL28
-/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccSvXMeY.s:598    .debug_info:00000000 .Ldebug_info0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:69     .text.CALLBACK_USB_GetDescriptor:00000032 .L2
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:88     .text.CALLBACK_USB_GetDescriptor:00000046 .L3
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:282    .text.CALLBACK_USB_GetDescriptor:000000ce .L12
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:260    .text.CALLBACK_USB_GetDescriptor:000000ba .L10
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:271    .text.CALLBACK_USB_GetDescriptor:000000c4 .L11
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:59     .text.CALLBACK_USB_GetDescriptor:0000002c .L4
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:132    .text.CALLBACK_USB_GetDescriptor:0000006a .L5
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:196    .text.CALLBACK_USB_GetDescriptor:00000092 .L6
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:167    .text.CALLBACK_USB_GetDescriptor:00000082 .L7
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:231    .text.CALLBACK_USB_GetDescriptor:000000aa .L8
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:2336   .debug_abbrev:00000000 .Ldebug_abbrev0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3528   .debug_ranges:00000000 .Ldebug_ranges0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3534   .debug_line:00000000 .Ldebug_line0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:15     .text.CALLBACK_USB_GetDescriptor:00000000 .LFB91
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:292    .text.CALLBACK_USB_GetDescriptor:000000d8 .LFE91
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:2874   .debug_loc:0000002a .LLST0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:2831   .debug_loc:00000000 .LVUS0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3073   .debug_loc:00000188 .LLST1
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3046   .debug_loc:0000016e .LVUS1
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3169   .debug_loc:00000247 .LLST2
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3128   .debug_loc:0000021f .LVUS2
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3299   .debug_loc:00000359 .LLST3
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3282   .debug_loc:00000349 .LVUS3
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3373   .debug_loc:000003df .LLST4
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3346   .debug_loc:000003c5 .LVUS4
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:105    .text.CALLBACK_USB_GetDescriptor:0000005a .LBB2
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:119    .text.CALLBACK_USB_GetDescriptor:00000060 .LBE2
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3468   .debug_loc:0000049d .LLST5
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3465   .debug_loc:0000049b .LVUS5
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:141    .text.CALLBACK_USB_GetDescriptor:00000072 .LBB3
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:155    .text.CALLBACK_USB_GetDescriptor:00000078 .LBE3
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3478   .debug_loc:000004b2 .LLST6
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3475   .debug_loc:000004b0 .LVUS6
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:170    .text.CALLBACK_USB_GetDescriptor:00000082 .LBB4
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:184    .text.CALLBACK_USB_GetDescriptor:00000088 .LBE4
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3488   .debug_loc:000004c7 .LLST7
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3485   .debug_loc:000004c5 .LVUS7
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:205    .text.CALLBACK_USB_GetDescriptor:0000009a .LBB5
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:219    .text.CALLBACK_USB_GetDescriptor:000000a0 .LBE5
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3498   .debug_loc:000004dc .LLST8
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3495   .debug_loc:000004da .LVUS8
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:234    .text.CALLBACK_USB_GetDescriptor:000000aa .LBB6
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:248    .text.CALLBACK_USB_GetDescriptor:000000b0 .LBE6
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3508   .debug_loc:000004f1 .LLST9
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:3505   .debug_loc:000004ef .LVUS9
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:14     .text.CALLBACK_USB_GetDescriptor:00000000 .LVL0
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:30     .text.CALLBACK_USB_GetDescriptor:00000008 .LVL1
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:58     .text.CALLBACK_USB_GetDescriptor:0000002c .LVL3
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:68     .text.CALLBACK_USB_GetDescriptor:00000032 .LVL4
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:84     .text.CALLBACK_USB_GetDescriptor:00000044 .LVL6
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:87     .text.CALLBACK_USB_GetDescriptor:00000046 .LVL7
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:128    .text.CALLBACK_USB_GetDescriptor:00000068 .LVL12
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:131    .text.CALLBACK_USB_GetDescriptor:0000006a .LVL13
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:163    .text.CALLBACK_USB_GetDescriptor:00000080 .LVL17
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:166    .text.CALLBACK_USB_GetDescriptor:00000082 .LVL18
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:192    .text.CALLBACK_USB_GetDescriptor:00000090 .LVL21
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:195    .text.CALLBACK_USB_GetDescriptor:00000092 .LVL22
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:227    .text.CALLBACK_USB_GetDescriptor:000000a8 .LVL26
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:230    .text.CALLBACK_USB_GetDescriptor:000000aa .LVL27
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:256    .text.CALLBACK_USB_GetDescriptor:000000b8 .LVL30
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:259    .text.CALLBACK_USB_GetDescriptor:000000ba .LVL31
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:267    .text.CALLBACK_USB_GetDescriptor:000000c2 .LVL32
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:270    .text.CALLBACK_USB_GetDescriptor:000000c4 .LVL33
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:278    .text.CALLBACK_USB_GetDescriptor:000000cc .LVL34
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:281    .text.CALLBACK_USB_GetDescriptor:000000ce .LVL35
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:288    .text.CALLBACK_USB_GetDescriptor:000000d6 .LVL36
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:47     .text.CALLBACK_USB_GetDescriptor:0000001e .LVL2
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:73     .text.CALLBACK_USB_GetDescriptor:00000036 .LVL5
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:91     .text.CALLBACK_USB_GetDescriptor:00000048 .LVL8
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:103    .text.CALLBACK_USB_GetDescriptor:0000005a .LVL9
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:139    .text.CALLBACK_USB_GetDescriptor:00000072 .LVL14
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:203    .text.CALLBACK_USB_GetDescriptor:0000009a .LVL23
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:123    .text.CALLBACK_USB_GetDescriptor:00000064 .LVL11
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:159    .text.CALLBACK_USB_GetDescriptor:0000007c .LVL16
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:188    .text.CALLBACK_USB_GetDescriptor:0000008c .LVL20
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:223    .text.CALLBACK_USB_GetDescriptor:000000a4 .LVL25
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:252    .text.CALLBACK_USB_GetDescriptor:000000b4 .LVL29
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:116    .text.CALLBACK_USB_GetDescriptor:00000060 .LVL10
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:152    .text.CALLBACK_USB_GetDescriptor:00000078 .LVL15
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:181    .text.CALLBACK_USB_GetDescriptor:00000088 .LVL19
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:216    .text.CALLBACK_USB_GetDescriptor:000000a0 .LVL24
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:245    .text.CALLBACK_USB_GetDescriptor:000000b0 .LVL28
+/var/folders/bq/146k_07x5pn0twfdhlrpxh7h0000gn/T//ccw9SR1X.s:604    .debug_info:00000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 mocoMode

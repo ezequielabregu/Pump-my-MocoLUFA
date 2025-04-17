@@ -101,8 +101,8 @@
                  
      .Endpoint0Size          = FIXED_CONTROL_ENDPOINT_SIZE,
          
-     .VendorID = 0x4EA6, // Atmel
-     .ProductID = 0x626F, // LUFA USB-MIDI Demo application
+     .VendorID = 0xD14B, // Atmel
+     .ProductID = 0xFA42, // LUFA USB-MIDI Demo application
      .ReleaseNumber          = 0x0000,
          
      .ManufacturerStrIndex   = 0x01,
