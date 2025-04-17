@@ -101,8 +101,8 @@
                  
      .Endpoint0Size          = FIXED_CONTROL_ENDPOINT_SIZE,
          
-     .VendorID = 0xDC0D, // Atmel
-     .ProductID = 0xC6B0, // LUFA USB-MIDI Demo application
+     .VendorID = 0x4EA6, // Atmel
+     .ProductID = 0x626F, // LUFA USB-MIDI Demo application
      .ReleaseNumber          = 0x0000,
          
      .ManufacturerStrIndex   = 0x01,
@@ -452,8 +452,8 @@
  };
  /* for MIDI */
  const USB_Descriptor_String_t PROGMEM ProductStringMIDI = {
-    .Header                 = {.Size = USB_STRING_LEN(2), .Type = DTYPE_String},
-    .UnicodeString          = { 'E', 'A' }
+    .Header                 = {.Size = USB_STRING_LEN(11), .Type = DTYPE_String},
+    .UnicodeString          = { 'l', 'u', 'c', 'a', 's', 'a', 'b', 'r', 'e', 'g', 'u' }
 };
  
  /** This function is called by the library when in device mode, and must be overridden (see library "USB Descriptors"

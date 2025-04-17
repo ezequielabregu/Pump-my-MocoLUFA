@@ -39,7 +39,7 @@ def index():
 
 def modify_descriptors(device_name, manufacturer):
     path = os.path.join(FIRMWARE_DIR, 'Descriptors.c')
-    with open(path, 'r') as file:
+    with open(path, 'r', encoding='utf-8') as file:
         content = file.read()
 
     def to_unicode_array(text):
@@ -48,7 +48,6 @@ def modify_descriptors(device_name, manufacturer):
     device_unicode = to_unicode_array(device_name)
     dev_len = len(device_name)
 
-    # Specifically replace ProductStringMIDI descriptor
     content = re.sub(
         r'const USB_Descriptor_String_t PROGMEM ProductStringMIDI\s*=\s*\{\s*'
         r'\.Header\s*=\s*\{\.Size\s*=\s*USB_STRING_LEN\(\d+\),\s*\.Type\s*=\s*DTYPE_String\},\s*'
@@ -61,32 +60,27 @@ def modify_descriptors(device_name, manufacturer):
         flags=re.DOTALL
     )
 
-    with open(path, 'w') as file:
+    with open(path, 'w', encoding='utf-8') as file:
         file.write(content)
 
 def modify_vid_pid(vid, pid):
-    """
-    Modify the USB VID and PID in the firmware source code.
-    """
     path = os.path.join(FIRMWARE_DIR, 'Descriptors.c')
-    with open(path, 'r') as file:
+    with open(path, 'r', encoding='utf-8') as file:
         content = file.read()
 
-    # Replace the VID and PID in the source code
     content = re.sub(r'\.VendorID\s*=\s*0x[0-9A-Fa-f]+', f'.VendorID = 0x{vid}', content)
     content = re.sub(r'\.ProductID\s*=\s*0x[0-9A-Fa-f]+', f'.ProductID = 0x{pid}', content)
 
-    with open(path, 'w') as file:
+    with open(path, 'w', encoding='utf-8') as file:
         file.write(content)
 
 def modify_makefile_pid(arduino_model):
     print(f"Arduino Model received: {arduino_model}")  # Debugging
 
     path = os.path.join(FIRMWARE_DIR, 'makefile')
-    with open(path, 'r') as file:
+    with open(path, 'r', encoding='utf-8') as file:
         content = file.readlines()
 
-    # Determine the PID based on the Arduino model
     if arduino_model.lower() == "mega":
         model_pid = "0x0010"
     elif arduino_model.lower() == "uno":
@@ -94,7 +88,6 @@ def modify_makefile_pid(arduino_model):
     else:
         raise ValueError("Invalid Arduino Model. Choose 'Mega' or 'UNO'.")
 
-    # Replace the ARDUINO_MODEL_PID line
     pid_updated = False
     for i, line in enumerate(content):
         if "ARDUINO_MODEL_PID" in line and not line.strip().startswith("#"):
@@ -107,8 +100,7 @@ def modify_makefile_pid(arduino_model):
     if not pid_updated:
         raise Exception("ARDUINO_MODEL_PID line not found in the makefile.")
 
-    # Write the updated content back to the makefile
-    with open(path, 'w') as file:
+    with open(path, 'w', encoding='utf-8') as file:
         file.writelines(content)
 
 def compile_firmware():
@@ -134,5 +126,5 @@ import os
 print(f"Templates folder: {os.path.abspath('templates')}")
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000)    
-#    app.run(debug=True)
+#    app.run(host="0.0.0.0", port=5000)    
+    app.run(debug=True)
