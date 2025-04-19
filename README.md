@@ -3,6 +3,7 @@
 **Pump my MocoLUFA** is a web-based tool that allows users to customize and generate firmware for MocoLUFA-based devices. Users can modify the device name, manufacturer name, VID, PID, and Arduino model, and download the customized firmware as a `.hex` file.
 
 ---
+
 ## Online Demo
 
 You can try the online demo at:
@@ -84,6 +85,18 @@ Open your browser and navigate to:
 **Arduino Model:** Select either UNO or MEGA.
 
 Click the Generate Custom Firmware button!
+
+---
+
+### [!] IMPORTANT: Ownership and permissions
+
+The generated firmware files need to be owned by the web server user (usually `www-data` on Linux systems) and have the correct permissions to be accessible by the web server.
+
+To set the ownership and permissions, run the following commands:
+
+```bash
+sudo chown -R www-data:www-data /path/to/pumpmocolufa/firmware && sudo chmod -R 775 /path/to/pumpmocolufa/firmware
+```
 
 ---
 
