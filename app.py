@@ -54,7 +54,6 @@ def index():
     random_pid = f"{random.randint(0x1000, 0xFFFF):04X}"
     return render_template('index.html', random_vid=random_vid, random_pid=random_pid, counter=counter)
 
-
 def modify_descriptors(device_name, manufacturer):
     path = os.path.join(FIRMWARE_DIR, 'Descriptors.c')
     with open(path, 'r', encoding='utf-8') as file:

@@ -1,6 +1,13 @@
-# Pump My MocoLUFA
+# Pump my MocoLUFA
 
-**Pump My MocoLUFA** is a web-based tool that allows users to customize and generate firmware for MocoLUFA-based devices. Users can modify the device name, manufacturer name, VID, PID, and Arduino model, and download the customized firmware as a `.hex` file.
+**Pump my MocoLUFA** is a web-based tool that allows users to customize and generate firmware for MocoLUFA-based devices. Users can modify the device name, manufacturer name, VID, PID, and Arduino model, and download the customized firmware as a `.hex` file.
+
+---
+## Online Demo
+
+You can try the online demo at:
+
+[**pumpmocolufa.ezequielabregu.net**](https://pumpmocolufa.ezequielabregu.net/)
 
 ---
 
