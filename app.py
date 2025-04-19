@@ -9,16 +9,30 @@ app = Flask(__name__)
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 FIRMWARE_DIR = os.path.join(BASE_DIR, 'firmware')
 
+COUNTER_FILE = os.path.join(BASE_DIR, 'counter.txt')
+
+# Initialize the counter file if it doesn't exist
+if not os.path.exists(COUNTER_FILE):
+    with open(COUNTER_FILE, 'w') as f:
+        f.write('0')
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    counter = 0
     if request.method == 'POST':
+        # Increment the counter
+        with open(COUNTER_FILE, 'r+') as f:
+            counter = int(f.read().strip()) + 1
+            f.seek(0)
+            f.write(str(counter))
+            f.truncate()
+
+        # Existing logic for POST request
         device_name = request.form['device_name']
         manufacturer = request.form['manufacturer']
         vid = request.form['vid']
         pid = request.form['pid']
         arduino_model = request.form['arduino_model']
-
-        print(f"Form Data: device_name={device_name}, manufacturer={manufacturer}, vid={vid}, pid={pid}, arduino_model={arduino_model}")  # Debugging
 
         try:
             modify_descriptors(device_name, manufacturer)
@@ -31,10 +45,14 @@ def index():
         except Exception as e:
             return f"<h1>Error</h1><pre>{str(e)}</pre>"
 
+    # Read the current counter value
+    with open(COUNTER_FILE, 'r') as f:
+        counter = int(f.read().strip())
+
     # Generate random VID and PID for GET requests
     random_vid = f"{random.randint(0x1000, 0xFFFF):04X}"
     random_pid = f"{random.randint(0x1000, 0xFFFF):04X}"
-    return render_template('index.html', random_vid=random_vid, random_pid=random_pid)
+    return render_template('index.html', random_vid=random_vid, random_pid=random_pid, counter=counter)
 
 
 def modify_descriptors(device_name, manufacturer):
