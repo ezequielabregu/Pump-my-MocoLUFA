@@ -1,6 +1,6 @@
 # Pump my MocoLUFA
 
-**Pump my MocoLUFA** is a web-based tool that allows users to customize and generate firmware for MocoLUFA-based devices. Users can modify the device name, manufacturer name, VID, PID, and Arduino model, and download the customized firmware as a `.hex` file.
+**Pump my MocoLUFA** is a web-based tool that allows users to customize and generate firmware for MocoLUFA-based devices. Users can modify the device name, manufacturer name, PID, and Arduino model, and download the customized firmware as a `.hex` file.
 
 ---
 
@@ -16,7 +16,7 @@ You can try the online demo at:
 
 - **Customizable Device Name**: Set a custom name for your device.
 - **Customizable Manufacturer Name**: Define the manufacturer name.
-- **Random or Custom VID/PID**: Generate random USB Vendor ID (VID) and Product ID (PID) or specify your own.
+- **Random or Custom PID**: Generate random USB Product ID (PID) or specify your own.
 - **Arduino Model Selection**: Choose between Arduino UNO or MEGA.
 - **Firmware Generation**: Automatically generate a `.hex` firmware file based on the provided parameters.
 - **Downloadable Firmware**: Download the generated firmware directly from the web interface.
@@ -77,8 +77,6 @@ Open your browser and navigate to:
 **Device Name:** Enter the name of your device.
 
 **Manufacturer:** Enter the manufacturer name.
-
-**VID (hex):** Use the randomly generated VID or specify your own.
 
 **PID (hex):** Use the randomly generated PID or specify your own.
 

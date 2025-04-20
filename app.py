@@ -30,13 +30,13 @@ def index():
         # Existing logic for POST request
         device_name = request.form['device_name']
         manufacturer = request.form['manufacturer']
-        vid = request.form['vid']
+        #vid = request.form['vid']
         pid = request.form['pid']
         arduino_model = request.form['arduino_model']
 
         try:
             modify_descriptors(device_name, manufacturer)
-            modify_vid_pid(vid, pid)
+            modify_pid(pid)
             modify_makefile_pid(arduino_model)
 
             hex_path = compile_firmware()
@@ -80,12 +80,12 @@ def modify_descriptors(device_name, manufacturer):
     with open(path, 'w', encoding='utf-8') as file:
         file.write(content)
 
-def modify_vid_pid(vid, pid):
+def modify_pid(pid):
     path = os.path.join(FIRMWARE_DIR, 'Descriptors.c')
     with open(path, 'r', encoding='utf-8') as file:
         content = file.read()
 
-    content = re.sub(r'\.VendorID\s*=\s*0x[0-9A-Fa-f]+', f'.VendorID = 0x{vid}', content)
+    # Update only the ProductID (PID)
     content = re.sub(r'\.ProductID\s*=\s*0x[0-9A-Fa-f]+', f'.ProductID = 0x{pid}', content)
 
     with open(path, 'w', encoding='utf-8') as file:
