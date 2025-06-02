@@ -86,18 +86,6 @@ Click the Generate Custom Firmware button!
 
 ---
 
-### [!] IMPORTANT: Ownership and permissions
-
-The generated firmware files need to be owned by the web server user (usually `www-data` on Linux systems) and have the correct permissions to be accessible by the web server.
-
-To set the ownership and permissions, run the following commands:
-
-```bash
-sudo chown -R www-data:www-data /path/to/pumpmocolufa/firmware && sudo chmod -R 775 /path/to/pumpmocolufa/firmware
-```
-
----
-
 ### Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
@@ -109,3 +97,5 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 LUFA Library: Developed by Dean Camera (<www.fourwalledcubicle.com>).
 
 MocoLUFA: Based on the dualMocoLUFA project by morecat_lab.
+
+I definitely give a shoutout to the legacy [Yaeltex](https://yaeltex.com/) app called `Pimp My Mocolufa` as a reference.

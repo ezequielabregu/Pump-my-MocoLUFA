@@ -8,6 +8,8 @@
   <link rel="icon" href="/static/chip.png" type="image/x-icon">
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
 <body class="bg-light">
   <div class="container py-5">
@@ -29,7 +31,18 @@
               </div>
               <div class="mb-3">
                 <label for="pid" class="form-label fw-bold">PID <span style="font-weight: normal; font-size: 0.8rem;">*</span></label>
-                <input type="text" id="pid" name="pid" class="form-control" value="{{ random_pid }}" required>
+                <input type="text" 
+                       id="pid" 
+                       name="pid" 
+                       class="form-control" 
+                       value="{{ random_pid }}" 
+                       pattern="^[0-9A-Fa-f]{4}$" 
+                       title="Must be exactly 4 hexadecimal digits (0-9, A-F)" 
+                       maxlength="4" 
+                       minlength="4"
+                       placeholder="e.g., 1A2B"
+                       required>
+                       <p style="font-size: 0.7rem;">* The 4-digit hexadecimal (0-9, A-F) PID is randomly generated. You can change this value if needed.</p>
               </div>
               <div class="mb-3">
                 <label for="arduino_model" class="form-label fw-bold">Arduino Model</label>
@@ -49,19 +62,24 @@
 
           <!-- Column 3: Footer -->
           <div class="col-md-4" style="font-size: 0.8rem;">
-            <!-- <footer class="bg-light text-dark text-left py-3 rounded" style="font-size: 0.8rem;"> -->
-              <p class="mb-1 mt-5 fw-bold">[-] STATS</p>
-              <p class="mb-1 text-success" bg>Succeeded: <b>{{ counter }}</b></p>
-              <p class="mb-1 mt-5 fw-bold">[-] SERVER SETUP</p>
-              <p class="mb-1">avr-gcc (GCC) 5.4.0</p>
-              <p class="mb-1">avrdude: Version 6.3-20171130</p>
-              <p class="mb-1">LUFA: 100807</p>
-              <p class="mb-1 mt-5 fw-bold">[-] REFERENCES</p>
-              <p class="mb-0"><a href="https://github.com/kuwatay/mocolufa" class="text-secondary" target="_blank">MocoLUFA firmware</a></p>
-              <p class="mb-0"><a href="https://dfu-programmer.github.io/" class="text-secondary" target="_blank">dfu-programmer</a></p>
-              <p class="mb-0"><a href="https://docs.arduino.cc/retired/hacking/software/DFUProgramming8U2/" class="text-secondary" target="_blank">Flashing Arduino using DFU</a></p>
-              <p class="mb-1 mt-5" style="font-size: 0.7rem;">* The 4-digit hexadecimal PID is randomly generated.<br> You can change this value if needed.</p>
-            <!-- </footer> -->
+            <p class="mb-1 mt-3 fw-bold">[-] DONATIONS</p>
+           <p class="mb-0">
+              <a href="https://www.paypal.com/donate/?hosted_button_id=DY2G6ZSGBVN58" class="text-primary" target="_blank">
+                <i class="bi bi-paypal"></i> Paypal
+              </a>
+            </p>
+            <p class="mb-1 mt-5 fw-bold">[-] STATS</p>
+            <p class="mb-1 text-success">Succeeded: <b>{{ counter }}</b></p>
+            <p class="mb-1 mt-3 fw-bold">[-] SERVER SETUP</p>
+            <p class="mb-1">avr-gcc (GCC) 5.4.0</p>
+            <p class="mb-1">avrdude: Version 6.3-20171130</p>
+            <p class="mb-1">LUFA: 100807</p>
+            <p class="mb-1 mt-3 fw-bold">[-] REPOSITORY</p>
+            <p class="mb-0"><a href="https://github.com/ezequielabregu/pumpmocolufa" class="text-secondary" target="_blank">Github</a></p>
+            <p class="mb-1 mt-3 fw-bold">[-] REFERENCES</p>
+            <p class="mb-0"><a href="https://github.com/kuwatay/mocolufa" class="text-secondary" target="_blank">MocoLUFA firmware</a></p>
+            <p class="mb-0"><a href="https://dfu-programmer.github.io/" class="text-secondary" target="_blank">dfu-programmer</a></p>
+            <p class="mb-0"><a href="https://docs.arduino.cc/retired/hacking/software/DFUProgramming8U2/" class="text-secondary" target="_blank">Flashing Arduino using DFU</a></p>
           </div>
         </div>
       </div>
