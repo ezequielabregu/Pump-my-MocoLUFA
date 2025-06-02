@@ -94,7 +94,7 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ### Acknowledgments
 
-LUFA Library: Developed by Dean Camera (<www.fourwalledcubicle.com>).
+LUFA Library: Developed by Dean Camera.
 
 MocoLUFA: Based on the dualMocoLUFA project by morecat_lab.
 
